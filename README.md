@@ -4,4 +4,4 @@ Tech stack being used here Python, Snowflake and SQL. We will first split the la
 
 ## 📌 Problem 1: Find the number of businesses in each category
 
-<pre> ```sql with cte as ( select business_id, trim(A.value) as category from tbl_yelp_businesses, lateral split_to_table(categories, ',') A ) select category, count(*) as no_of_business from cte group by 1 order by 2 desc; ``` </pre>
+<pre> with cte as ( select business_id, trim(A.value) as category from tbl_yelp_businesses, lateral split_to_table(categories, ',') A ) select category, count(*) as no_of_business from cte group by 1 order by 2 desc; </pre>
