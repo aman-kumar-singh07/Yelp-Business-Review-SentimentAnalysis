@@ -7,27 +7,17 @@ The projects aims to analyse Yelp Business reviews using sentiment analysis from
 Steps taken:
 
 1. Spiltting JSON file (5GB- 7 million) into smaller files using Python for faster data ingestion.
-
-2. Uploading that data in s3 and then Snowflake. 
-
+2. Uploading that data in s3 and then Snowflake.
 3. Loading yelp reviews and business data (ELT)
-
-4. Now, transforming this json format data into tables 
-
-5. Then calling UDF in Python (analyze_sentiment) from SQL using TextBlob
-
-library.
-
+4. Now, transforming this json format data into tables
+5. Then calling UDF in Python (analyze_sentiment) from SQL using TextBlob library.
 6. Finally solving 10 sql problems using the tables to extracts insights for the business to take data driven decisions.
 
 Technologies Used
 
 🐍 Python: Data processing and transformation.
-
 ☁️ Amazon S3: Cloud storage for JSON files.
-
 ❄️ Snowflake: Data warehousing and analytics.
-
 🗄️ SQL: Data querying and analysis.
 
 
