@@ -2,6 +2,8 @@
 
 Tech stack being used here Amazon S3, Python, Snowflake and SQL. We will first split the large JSON file (5GB- 7 million) into smaller files using Python for faster data ingestion. Then we will upload that data in s3 and then Snowflake. Lastly we will answer some interesting business problems using SQL.
 
+The projects aims to analyse Yelp Business reviews using sentiment analysis from a dataset of 7 million reviews and 150k businesses and extract some useful insights to drive business decisions.
+
 ## 📌 Problem 1: Find the number of businesses in each category
 
 <pre> with cte as ( select business_id, trim(A.value) as category from tbl_yelp_businesses,
