@@ -55,7 +55,7 @@ order by 2 desc; </pre>
 from tbl_yelp_reviews r
 inner join tbl_yelp_businesses b 
     on r.business_id = b.business_id
-group by 1,2; <pre/>
+group by 1,2; </pre>
 📌 Problem 7: Find the top 5 most reviewed businesses in each city.
 <pre> with cte as (
     select 
@@ -70,7 +70,7 @@ group by 1,2; <pre/>
 ) 
 select * 
 from cte 
-qualify row_number() over (partition by city order by total_reviews desc) <= 5; <pre/>
+qualify row_number() over (partition by city order by total_reviews desc) <= 5; </pre>
 📌 Problem 8: Find the average rating of businesses that have at least 100 reviews.
 <pre> select 
     b.business_id, 
