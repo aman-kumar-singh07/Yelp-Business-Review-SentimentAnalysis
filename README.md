@@ -39,7 +39,7 @@ order by 2 desc; </pre>
     inner join tbl_yelp_businesses b on r.business_id = b.business_id
 )
 select * from cte
-where rn <= 3; <pre/>
+where rn <= 3; </pre>
 📌 Problem 5: Find the month with the highest number of reviews.
 <pre>select month(review_date) as review_month, count(*) as no_of_reviews
 from tbl_yelp_reviews
