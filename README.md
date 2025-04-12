@@ -81,7 +81,8 @@ from tbl_yelp_reviews r
 inner join tbl_yelp_businesses b 
     on r.business_id = b.business_id
 group by 1,2
-having count(*) >= 100; <pre/>
+having count(*) >= 100; </pre>
+
 📌 Problem 9: List the top 10 users who have written the most reviews, along with the businesses they reviewed.
 <pre> with cte as (
     select r.user_id, count(*) as total_reviews
